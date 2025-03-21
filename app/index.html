@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video calling app</title>
+    <script src="/public/js/socket.js" defer ></script>
+
+</head>
+<body>
+    <h1>helloo</h1>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Calling App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/public/js/socket.js" defer ></script>
+    <script src="/public/js/main.js"></script>
+
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center min-h-screen">
+    <div class="w-full max-w-4xl p-4 bg-gray-800 rounded-lg shadow-lg">
+        <!-- Contacts List -->
+        <aside class="mb-4">
+            <h1 class="text-xl font-bold mb-2">Contacts</h1>
+            <ul id="allusers" class="space-y-2">
+                <li class="flex items-center justify-between p-2 bg-gray-700 rounded-md">
+                    <span>Astha patel</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">Call</button>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Video Call Container -->
+        <section class="space-y-4">
+            <div>
+                <input id="username" type="text" placeholder="Enter Username" class="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-black rounded overflow-hidden">
+                    <video id="localVideo" autoplay muted playsinline class="w-full"></video>
+                </div>
+                <div class="bg-black rounded overflow-hidden">
+                    <video id="remoteVideo" autoplay muted playsinline class="w-full"></video>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button id="end-call-btn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded flex items-center mx-auto">
+                    <img src="/images/phone-disconnect.png" alt="End Call" class="w-6 h-6 mr-2"> End Call
+                </button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
