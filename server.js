@@ -21,7 +21,10 @@ app.get("/",(req,res) =>{
 })
 
 io.on("connection", (socket) => {
-    console.log('server connected to socket server and socket id is ${socket.id}')
+    console.log(`server connected to socket server and socket id is ${socket.id}`)
+    socket.on("join-user",username =>{
+        console.log(`${username} joined socket`)
+    })
 })
 server.listen(9000,()=>{
     console.log("server is runing on port 9000")
